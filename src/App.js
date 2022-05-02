@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import Table from "./Components/Table";
 
 function App() {
+  const coloumnH = [
+    { heading: "Name", value: "name" },
+    { heading: "Email", value: "email" },
+    { heading: "Phone", value: "phone" },
+    { heading: "Username", value: "username" },
+    { heading: "Employee", value: "username" },
+    { heading: "HR", value: "username" },
+    { heading: "CEO", value: "username" },
+    { heading: "HManager", value: "username" },
+    { heading: "Candidate", value: "username" },
+    { heading: "Freelancer", value: "username" },
+    { heading: "Admin", value: "username" },
+  ];
+  const [dataTable, setDataTable] = useState([]);
+  // console.log(dataTable);
+
+  useEffect(() => {
+    axios("https://jsonplaceholder.typicode.com/users")
+      .then((res) => setDataTable(res.data))
+      .catch((err) => console.log(err));
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Table data={dataTable} fields={coloumnH} />
     </div>
   );
 }
