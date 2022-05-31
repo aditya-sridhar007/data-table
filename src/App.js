@@ -5,17 +5,17 @@ import Table from "./Components/Table";
 
 function App() {
   const coloumnH = [
-    { heading: "Name", value: "name" },
-    { heading: "Email", value: "email" },
-    { heading: "Phone", value: "phone" },
-    { heading: "Username", value: "username" },
-    { heading: "Employee", value: "username" },
-    { heading: "HR", value: "username" },
-    { heading: "CEO", value: "username" },
-    { heading: "HManager", value: "username" },
-    { heading: "Candidate", value: "username" },
-    { heading: "Freelancer", value: "username" },
-    { heading: "Admin", value: "username" },
+    { heading: "Name", value: "name", isVisible: true },
+    { heading: "Email", value: "email", isVisible: true },
+    { heading: "Phone", value: "phone", isVisible: true },
+    { heading: "Username", value: "username", isVisible: true },
+    { heading: "Employee", value: "username", isVisible: true },
+    { heading: "HR", value: "username", isVisible: true },
+    { heading: "CEO", value: "username", isVisible: true },
+    { heading: "HManager", value: "username", isVisible: true },
+    { heading: "Candidate", value: "username", isVisible: true },
+    { heading: "Freelancer", value: "username", isVisible: true },
+    { heading: "Admin", value: "username", isVisible: true },
   ];
   const [dataTable, setDataTable] = useState([]);
   // console.log(dataTable);
