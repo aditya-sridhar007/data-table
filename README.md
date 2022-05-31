@@ -1,1 +1,1 @@
-A responsive data-table with collapsable data coloumns when screen size decreases
+A responsive data-table with collapsable data columns when screen size decreases
